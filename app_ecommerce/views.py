@@ -18,7 +18,7 @@ def store(request):
 	items = data['items']
 
 	products = Product.objects.all()
-	context = {'products':products, 'cartItems':cartItems}
+	context = {'products':products, 'cartItems':cartItems, 'items':items, 'order':order}
 	return render(request, 'store/store.html', context)
 
 
@@ -56,9 +56,9 @@ def updateItem(request):
 	orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
 
 	if action == 'add':
-		orderItem.quantity = (orderItem.quantity + 1)
+		orderItem.quantity = (orderItem.quantity + .5)
 	elif action == 'remove':
-		orderItem.quantity = (orderItem.quantity - 1)
+		orderItem.quantity = (orderItem.quantity - .5)
 
 	orderItem.save()
 

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="F:\DjangoProject\basic project\project"
+VIRTUAL_ENV="C:\Users\TANVIR\Desktop\basic\basic-application-django\project"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

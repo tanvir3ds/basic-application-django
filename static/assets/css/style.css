@@ -582,6 +582,77 @@ body{
     visibility: visible;
 }
 /*********************
+
+
+
+
+
+
+/*********************/
+.btn-scroll-top-button{
+    color: #333333;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    height: 50px;
+    width: 50px;
+    z-index: 999;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: hidden;
+    -webkit-transition:0.4s;
+    -o-transition:0.4s;
+    transition:0.4s;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.btn-scroll-top-button i{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    display: block;
+}
+@media only screen and (max-width:767.98px){
+    .btn-scroll-top-button{
+        line-height:40px;
+        height:40px;
+        width:40px;
+        font-size: 40px;
+        bottom: 80px;
+        right: 30px;
+    }
+}
+.btn-scroll-top-button.showUp{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    filter: alpha(opacity=100);
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
 * Menu Mobile        *
 **********************/
 .biolife-clone-wrap{

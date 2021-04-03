@@ -44,12 +44,12 @@ function addCookieItem(productId, action){
 		cart[productId] = {'quantity':1}
 
 		}else{
-			cart[productId]['quantity'] += 1
+			cart[productId]['quantity'] += .5
 		}
 	}
 
 	if (action == 'remove'){
-		cart[productId]['quantity'] -= 1
+		cart[productId]['quantity'] -= .5
 
 		if (cart[productId]['quantity'] <= 0){
 			console.log('Item should be deleted')

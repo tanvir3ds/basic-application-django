@@ -576,9 +576,9 @@
 
 
         <div class="mobile-block block-minicart">
-            <a class="link-to-cart" href="#">
+            <a class="link-to-cart" href="{% url 'cart' %}">
                 <span class="fa fa-shopping-bag" aria-hidden="true"></span>
-                <span class="text">Cart</span>
+                <span class="text">৳{{order.get_cart_total|floatformat:2}}</span>
             </a>
         </div>
     </div>
@@ -745,7 +745,17 @@
 </div>
 
 <!-- Scroll Top Button -->
+
+<!-- <a class="btn-scroll-top"><i class=" "></i>
+    
+
+    <h3>{{order.get_cart_total|floatformat:2}} </h3>
+
+</a> -->
 <a class="btn-scroll-top"><i class="biolife-icon icon-left-arrow"></i></a>
+
+
+
 
 <script src="{% static 'assets/js/jquery-3.4.1.min.js' %}"></script>
 <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
